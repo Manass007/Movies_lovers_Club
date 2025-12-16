@@ -1,24 +1,32 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 //MUI Imports
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Appbar from "@/components/common/AppBar";
-import { CssBaseline, Grid, ThemeProvider, useTheme } from "@mui/material";
+import {
+  Container,
+  CssBaseline,
+  Grid,
+  ThemeProvider,
+} from "@mui/material";
 import { lightTheme, darkTheme } from "@/styles/mui/theme";
 
 //card imports
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { MyCard } from "../components/common/customComponent";
+import { CustomCard } from "../components/common/customComponent";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTheme, getActiveTheme } from "@/redux/reducer/themeReducer";
 
 export default function Home() {
-  const [currentTheme, setCurrentTheme] = useState("light");
-  const [visible, setVisible] = useState(false);
-  const theme = useTheme();
+  // const [currentTheme, setCurrentTheme] = useState("light");
+  // const [visible, setVisible] = useState(false);
+  const dispatch = useDispatch();
+  const currentTheme = useSelector(selectTheme).activeTheme;
+
+  useEffect(() => {
+    dispatch(getActiveTheme()); // To get theme from Cookie
+  }, []);
+
   const movies = [
     {
       name: "Avengers",
@@ -51,8 +59,8 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Appbar setCurrentTheme={setCurrentTheme} currentTheme={currentTheme} />
-        <Button onClick={() => setVisible(!visible)}>TOGGLE</Button>
+        <Appbar />
+        {/* <Button onClick={() => setVisible(!visible)}>TOGGLE</Button>
 
         <Box height="200px">
           {visible ? (
@@ -61,31 +69,25 @@ export default function Home() {
             ></Box>
           ) : (
             <></>
-          )}
-          <Grid>
-<Grid>
-          <MyCard>
-            <CardMedia
-              sx={{ height: 140 }}
-              image="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/7b350a2f-0b3e-4033-8125-34c4d67e3bbe/compose?aspectRatio=1.78&format=webp&width=1200"
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </MyCard>
-          </Grid>
-          </Grid>
+          )} */}
+        <Box margin={"25px"}>
+          <Container>
+            <Grid container spacing={2} direction="row" justifyContent="center">
+              {movies ? (
+                movies.map((movie) => (
+                  <Grid size={{xl: 4, md: 4, xs: 12}}>
+                    <CustomCard
+                      name={movie.name}
+                      image={movie.img}
+                      desc={movie.desc}
+                    />
+                  </Grid>
+                ))
+              ) : (
+                <></>
+              )}
+            </Grid>
+          </Container>
         </Box>
       </ThemeProvider>
     </>

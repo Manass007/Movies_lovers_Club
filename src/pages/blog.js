@@ -1,12 +1,20 @@
 import Appbar from "@/components/common/AppBar";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { lightTheme, darkTheme } from "@/styles/mui/theme";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTheme } from "@/redux/reducer/themeReducer";
 
 export default function Blog() {
-  const [currentTheme, setCurrentTheme] = useState("light");
+   const dispatch = useDispatch();
+  const currentTheme = useSelector(selectTheme).activeTheme;
+  // const [currentTheme, setCurrentTheme] = useState("light");
+
+  useEffect(() => {
+    dispatch(getActiveTheme()); // To get theme from Cookie
+  }, []);
 
   return (
     <>
@@ -18,7 +26,7 @@ export default function Blog() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Appbar setCurrentTheme={setCurrentTheme} currentTheme={currentTheme} />
+        <Appbar />
         <div>Blog Page</div>
       </ThemeProvider>
     </>

@@ -15,8 +15,12 @@ import { useTheme } from "@mui/material";
 //icons import
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTheme, toggleTheme } from "@/redux/reducer/themeReducer";
 
-export default function Appbar(props) {
+export default function Appbar() {
+  const dispatch = useDispatch();
+  const currentTheme = useSelector(selectTheme).activeTheme;
   const theme = useTheme();
   return (
     <>
@@ -29,9 +33,6 @@ export default function Appbar(props) {
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
-              onClick={() =>
-                props.setCurrentTheme(props.currentTheme === "dark" ? "light" : "dark")
-              }
             >
               <MenuIcon />
             </IconButton>
@@ -45,17 +46,18 @@ export default function Appbar(props) {
               aria-label="menu"
               sx={{ mr: 2 }}
               onClick={() =>
-                props.setCurrentTheme(
-                  props.currentTheme === "dark" ? "light" : "dark"
-                )
+                  dispatch(toggleTheme())
               }
             >
-              {props.currentTheme === "dark" ? (
+              {currentTheme === "dark" ? (
                 <LightModeIcon />
               ) : (
                 <DarkModeIcon />
               )}
             </IconButton>
+            <Link href={"/"}>
+              <Button sx={{color: theme.palette.icon.main}}>Home</Button>
+            </Link>
             <Link href={"/blog"}>
               <Button sx={{color: theme.palette.icon.main}}>Blog</Button>
             </Link>
