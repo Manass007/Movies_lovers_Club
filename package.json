@@ -1,28 +1,17 @@
 {
-  "name": "movies-lover",
-  "version": "0.1.0",
-  "private": true,
+  "name": "js-basics",
+  "version": "1.0.0",
+  "description": "basics of JS",
+  "license": "ISC",
+  "author": "Manas",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.6",
-    "@mui/material": "^7.3.6",
-    "@reduxjs/toolkit": "^2.11.2",
-    "next": "16.0.8",
-    "react": "19.2.1",
-    "react-cookie": "^8.0.1",
-    "react-cookies": "^0.1.1",
-    "react-dom": "19.2.1",
-    "react-redux": "^9.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^9",
-    "eslint-config-next": "16.0.8"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
   }
 }
