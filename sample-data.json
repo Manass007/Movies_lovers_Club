@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Rahul Sharma",
+    "email": "rahul.sharma@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 85,
+    "subjects": ["Database Systems", "Web Development", "Data Structures"],
+    "enrolled": true,
+    "city": "Mumbai"
+  },
+  {
+    "name": "Priya Patel",
+    "email": "priya.patel@example.com",
+    "age": 21,
+    "course": "BCA",
+    "marks": 92,
+    "subjects": ["Programming", "Networking", "Web Development"],
+    "enrolled": true,
+    "city": "Delhi"
+  },
+  {
+    "name": "Amit Kumar",
+    "email": "amit.kumar@example.com",
+    "age": 23,
+    "course": "MCA",
+    "marks": 78,
+    "subjects": ["Machine Learning", "Database Systems", "Cloud Computing"],
+    "enrolled": true,
+    "city": "Bangalore"
+  },
+  {
+    "name": "Sneha Reddy",
+    "email": "sneha.reddy@example.com",
+    "age": 20,
+    "course": "BCA",
+    "marks": 88,
+    "subjects": ["Programming", "Database Systems", "Web Development"],
+    "enrolled": true,
+    "city": "Hyderabad"
+  },
+  {
+    "name": "Vikram Singh",
+    "email": "vikram.singh@example.com",
+    "age": 24,
+    "course": "MBA",
+    "marks": 75,
+    "subjects": ["Marketing", "Finance", "Operations"],
+    "enrolled": false,
+    "city": "Mumbai"
+  },
+  {
+    "name": "Anjali Desai",
+    "email": "anjali.desai@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 95,
+    "subjects": ["Algorithms", "Database Systems", "AI"],
+    "enrolled": true,
+    "city": "Pune"
+  },
+  {
+    "name": "Ravi Verma",
+    "email": "ravi.verma@example.com",
+    "age": 21,
+    "course": "BCA",
+    "marks": 68,
+    "subjects": ["Programming", "Web Development"],
+    "enrolled": true,
+    "city": "Delhi"
+  },
+  {
+    "name": "Neha Gupta",
+    "email": "neha.gupta@example.com",
+    "age": 23,
+    "course": "MBA",
+    "marks": 82,
+    "subjects": ["Marketing", "HR", "Finance"],
+    "enrolled": true,
+    "city": "Bangalore"
+  },
+  {
+    "name": "Karan Mehta",
+    "email": "karan.mehta@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 72,
+    "subjects": ["Database Systems", "Networking", "Security"],
+    "enrolled": true,
+    "city": "Chennai"
+  },
+  {
+    "name": "Pooja Joshi",
+    "email": "pooja.joshi@example.com",
+    "age": 20,
+    "course": "BCA",
+    "marks": 90,
+    "subjects": ["Programming", "Database Systems", "Web Development"],
+    "enrolled": true,
+    "city": "Mumbai"
+  },
+  {
+    "name": "Arjun Nair",
+    "email": "arjun.nair@example.com",
+    "age": 24,
+    "course": "MCA",
+    "marks": 81,
+    "subjects": ["Cloud Computing", "DevOps", "Database Systems"],
+    "enrolled": true,
+    "city": "Kochi"
+  },
+  {
+    "name": "Divya Iyer",
+    "email": "divya.iyer@example.com",
+    "age": 21,
+    "course": "BCA",
+    "marks": 87,
+    "subjects": ["Programming", "Web Development", "Mobile Apps"],
+    "enrolled": true,
+    "city": "Chennai"
+  },
+  {
+    "name": "Sanjay Agarwal",
+    "email": "sanjay.agarwal@example.com",
+    "age": 25,
+    "course": "MBA",
+    "marks": 79,
+    "subjects": ["Finance", "Marketing", "Strategy"],
+    "enrolled": true,
+    "city": "Kolkata"
+  },
+  {
+    "name": "Meera Krishnan",
+    "email": "meera.krishnan@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 93,
+    "subjects": ["AI", "Machine Learning", "Deep Learning"],
+    "enrolled": true,
+    "city": "Bangalore"
+  },
+  {
+    "name": "Rohit Chauhan",
+    "email": "rohit.chauhan@example.com",
+    "age": 20,
+    "course": "BCA",
+    "marks": 76,
+    "subjects": ["Programming", "Networking", "Database Systems"],
+    "enrolled": true,
+    "city": "Jaipur"
+  },
+  {
+    "name": "Sakshi Malhotra",
+    "email": "sakshi.malhotra@example.com",
+    "age": 23,
+    "course": "MCA",
+    "marks": 89,
+    "subjects": ["Web Development", "Database Systems", "Security"],
+    "enrolled": true,
+    "city": "Delhi"
+  },
+  {
+    "name": "Aditya Rao",
+    "email": "aditya.rao@example.com",
+    "age": 24,
+    "course": "MBA",
+    "marks": 71,
+    "subjects": ["Operations", "Supply Chain", "Finance"],
+    "enrolled": false,
+    "city": "Hyderabad"
+  },
+  {
+    "name": "Kavya Menon",
+    "email": "kavya.menon@example.com",
+    "age": 21,
+    "course": "BCA",
+    "marks": 94,
+    "subjects": ["Programming", "AI", "Web Development"],
+    "enrolled": true,
+    "city": "Kochi"
+  },
+  {
+    "name": "Harsh Jain",
+    "email": "harsh.jain@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 65,
+    "subjects": ["Database Systems", "Networking", "Cloud Computing"],
+    "enrolled": true,
+    "city": "Indore"
+  },
+  {
+    "name": "Tanvi Shah",
+    "email": "tanvi.shah@example.com",
+    "age": 20,
+    "course": "BCA",
+    "marks": 83,
+    "subjects": ["Programming", "Database Systems", "Web Development"],
+    "enrolled": true,
+    "city": "Ahmedabad"
+  },
+  {
+    "name": "Kunal Kapoor",
+    "email": "kunal.kapoor@example.com",
+    "age": 25,
+    "course": "MBA",
+    "marks": 88,
+    "subjects": ["Marketing", "Finance", "Entrepreneurship"],
+    "enrolled": true,
+    "city": "Mumbai"
+  },
+  {
+    "name": "Ishita Bansal",
+    "email": "ishita.bansal@example.com",
+    "age": 21,
+    "course": "MCA",
+    "marks": 91,
+    "subjects": ["Algorithms", "Data Structures", "AI"],
+    "enrolled": true,
+    "city": "Chandigarh"
+  },
+  {
+    "name": "Varun Sinha",
+    "email": "varun.sinha@example.com",
+    "age": 23,
+    "course": "BCA",
+    "marks": 73,
+    "subjects": ["Programming", "Web Development", "Networking"],
+    "enrolled": true,
+    "city": "Patna"
+  },
+  {
+    "name": "Riya Chopra",
+    "email": "riya.chopra@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 86,
+    "subjects": ["Machine Learning", "Database Systems", "Cloud Computing"],
+    "enrolled": true,
+    "city": "Pune"
+  },
+  {
+    "name": "Mohit Sharma",
+    "email": "mohit.sharma@example.com",
+    "age": 24,
+    "course": "MBA",
+    "marks": 77,
+    "subjects": ["HR", "Operations", "Marketing"],
+    "enrolled": false,
+    "city": "Lucknow"
+  },
+  {
+    "name": "Nisha Pillai",
+    "email": "nisha.pillai@example.com",
+    "age": 20,
+    "course": "BCA",
+    "marks": 96,
+    "subjects": ["Programming", "AI", "Database Systems"],
+    "enrolled": true,
+    "city": "Trivandrum"
+  },
+  {
+    "name": "Ayush Mishra",
+    "email": "ayush.mishra@example.com",
+    "age": 22,
+    "course": "MCA",
+    "marks": 70,
+    "subjects": ["Web Development", "Database Systems", "Networking"],
+    "enrolled": true,
+    "city": "Varanasi"
+  },
+  {
+    "name": "Simran Kaur",
+    "email": "simran.kaur@example.com",
+    "age": 21,
+    "course": "BCA",
+    "marks": 84,
+    "subjects": ["Programming", "Web Development", "Mobile Apps"],
+    "enrolled": true,
+    "city": "Amritsar"
+  },
+  {
+    "name": "Akash Pandey",
+    "email": "akash.pandey@example.com",
+    "age": 23,
+    "course": "MCA",
+    "marks": 80,
+    "subjects": ["Cloud Computing", "Database Systems", "DevOps"],
+    "enrolled": true,
+    "city": "Bhopal"
+  },
+  {
+    "name": "Shruti Kulkarni",
+    "email": "shruti.kulkarni@example.com",
+    "age": 25,
+    "course": "MBA",
+    "marks": 74,
+    "subjects": ["Finance", "Marketing", "Operations"],
+    "enrolled": true,
+    "city": "Nagpur"
+  }
+]
