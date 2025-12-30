@@ -42,4 +42,16 @@ next-env.d.ts
 python-basics/backend/.venv
 python-basics/recommendation_system/.venv
 python-basics/recommendation_system/model_assets/cosine_sim.npy
-
+python-basics/recommendation_system/dataset/books.csv
+python-basics/recommendation_system/dataset/books_cleaned.csv
+python-basics/backend/__pycache__/
+python-basics/recommendation_system/__pycache__/
+python-basics/recommendation_system/model_assets/__pycache__/
+python-basics/recommendation_system/dataset/__pycache__/
+.python-basics/backend/.vscode/
+.python-basics/recommendation_system/.vscode/
+.python-basics/recommendation_system/model_assets/.vscode/
+.python-basics/recommendation_system/dataset/.vscode/
+.vscode/
+python-basics/backend/students_output.csv
+python-basics/backend/students.csv
