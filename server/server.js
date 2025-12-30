@@ -1,7 +1,6 @@
 const express = require("express"); // npm i express
 const mongoose = require("mongoose"); // npm i mongoose
 require("dotenv").config(); // npm i dotenv
-require("./models/Movie");
 
 const port = process.env.PORT;
 
@@ -15,9 +14,13 @@ mongoose.connect(process.env.MONGO_URI, {}).then(() => {
   console.error("Error connecting to MongoDB:", err);
 })
 
-require("./models/Movie")
+require("./models/Movie");
+require("./models/User");
 
 require("./routes/movieRoutes")(app);
+require("./routes/userRoutes")(app);
+require("./routes/authRoutes")(app);
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

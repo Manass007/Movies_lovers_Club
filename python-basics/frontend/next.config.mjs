@@ -1,19 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  /* config options here */
   reactStrictMode: true,
-  async rewrites() {
+    async rewrites() {
     return [
       {
         source: "/api/recommend",
         destination: "http://localhost:5000/recommend",
       },
-      {
-        source: "/api/:path*",
-        destination: "http://localhost:5001/api/:path*",
-      },
     ];
-  },
+  }
 };
-
 
 export default nextConfig;

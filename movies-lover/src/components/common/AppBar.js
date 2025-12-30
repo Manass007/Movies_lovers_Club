@@ -61,7 +61,9 @@ export default function Appbar() {
             <Link href={"/blog"}>
               <Button sx={{color: theme.palette.icon.main}}>Blog</Button>
             </Link>
-            <Button color="inherit">Login</Button>
+            <Link href={"/login"}>
+            <Button sx={{color: theme.palette.icon.main}}>Login</Button>
+            </Link>
           </Toolbar>
         </AppBar>
       </Box>

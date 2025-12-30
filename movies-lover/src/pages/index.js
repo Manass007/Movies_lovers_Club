@@ -2,20 +2,20 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 //MUI Imports
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Appbar from "@/components/common/AppBar";
 import {
   Container,
   CssBaseline,
   Grid,
-  ThemeProvider,
+  ThemeProvider, Stack, Skeleton
 } from "@mui/material";
 import { lightTheme, darkTheme } from "@/styles/mui/theme";
-
+import axios from "axios";
 //card imports
 import { CustomCard } from "../components/common/customComponent";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTheme, getActiveTheme } from "@/redux/reducer/themeReducer";
+import { fetchMovies, selectMovies } from "@/redux/reducer/movieReducer";
 
 export default function Home() {
   // const [currentTheme, setCurrentTheme] = useState("light");
@@ -23,32 +23,56 @@ export default function Home() {
   const dispatch = useDispatch();
   const currentTheme = useSelector(selectTheme).activeTheme;
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  // const [movies, setMovies] = useState(null);
+
   useEffect(() => {
     dispatch(getActiveTheme()); // To get theme from Cookie
+    dispatch(fetchMovies());
+    // fetchData();
   }, []);
 
-  const movies = [
-    {
-      name: "Avengers",
-      img: "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/7b350a2f-0b3e-4033-8125-34c4d67e3bbe/compose?aspectRatio=1.78&format=webp&width=1200",
-      desc: "Directed by Joss Whedon",
-    },
-    {
-      name: "Terminator",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqsW3jntlwkuRcxsIT1rLpjtC3HuMukv7elQ&s",
-      desc: "Directed by james cameron",
-    },
-    {
-      name: "Inceptor",
-      img: "https://i.ytimg.com/vi/_Mc0TZueRQE/maxresdefault.jpg",
-      desc: "Directed by Chris Nolan",
-    },
-    {
-      name: "Jurassic Park",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMs7X6ePzaoeG2pl3Q8gXOw6blAFrfh4G-VQ&s",
-      desc: "Directed by Steven spieling",
-    },
-  ];
+  // const movies = [
+  //   {
+  //     name: "Avengers",
+  //     img: "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/7b350a2f-0b3e-4033-8125-34c4d67e3bbe/compose?aspectRatio=1.78&format=webp&width=1200",
+  //     desc: "Directed by Joss Whedon",
+  //   },
+  //   {
+  //     name: "Terminator",
+  //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqsW3jntlwkuRcxsIT1rLpjtC3HuMukv7elQ&s",
+  //     desc: "Directed by james cameron",
+  //   },
+  //   {
+  //     name: "Inceptor",
+  //     img: "https://i.ytimg.com/vi/_Mc0TZueRQE/maxresdefault.jpg",
+  //     desc: "Directed by Chris Nolan",
+  //   },
+  //   {
+  //     name: "Jurassic Park",
+  //     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMs7X6ePzaoeG2pl3Q8gXOw6blAFrfh4G-VQ&s",
+  //     desc: "Directed by Steven spieling",
+  //   },
+  // ];
+
+  
+  // const fetchData = async () => {
+    //     try {
+  //       console.log("Try");
+  //       const response = await axios.get("/api/v1/get/movies");
+  //       console.log("response: ", response.data);
+  //       console.log("HAHAHAHA");
+
+  //       setMovies(response.data);
+
+  //     } catch (error) {
+  //       console.log(error);
+  //     } finally {
+  //       console.log("finally");
+  //     }
+  //   }
+  const movies = useSelector(selectMovies);
   return (
     <>
       <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
@@ -73,19 +97,36 @@ export default function Home() {
         <Box margin={"25px"}>
           <Container>
             <Grid container spacing={2} direction="row" justifyContent="center">
-              {movies ? (
-                movies.map((movie) => (
-                  <Grid size={{xl: 4, md: 4, xs: 12}}>
+              {movies.loading === "loaded" ? (
+                // movies.response.map((movie) => (
+                movies.movies.map((movie) => (
+
+                  <Grid size={{ xl: 4, md: 4, xs: 12 }}>
                     <CustomCard
                       name={movie.name}
-                      image={movie.img}
-                      desc={movie.desc}
+                      image={movie.image}
+                      description={movie.desc}
                     />
                   </Grid>
                 ))
-              ) : (
-                <></>
-              )}
+              ) : isLoading ? (
+                <Grid container spacing={2} justifyContent="center">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                  <Grid size={{ xl: 4, md: 4, xs: 12 }} key={item}>
+                    <Stack spacing={1}>
+                      <Skeleton
+                        variant="rectangular"
+                        animation="wave"
+                        width={345}
+                        height={450}
+                        color="white"
+                        sx={{ borderRadius: "20px"}}
+                      />
+                    </Stack>
+                  </Grid>
+                ))}
+              </Grid>
+              ):(<Typography > No Data Found</Typography>)}
             </Grid>
           </Container>
         </Box>

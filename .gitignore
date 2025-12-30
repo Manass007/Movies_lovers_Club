@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+python-basics/backend/.venv
+python-basics/recommendation_system/.venv
+python-basics/recommendation_system/model_assets/cosine_sim.npy
+

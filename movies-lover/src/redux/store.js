@@ -10,10 +10,12 @@
 
 const { configureStore } = require("@reduxjs/toolkit");
 import { themeReducer } from "./reducer/themeReducer";
+import { movieReducer } from "./reducer/movieReducer";
 
 
 export const store = configureStore({
     reducer: {
         activeTheme: themeReducer,
+        moviesData: movieReducer
     }
 })
