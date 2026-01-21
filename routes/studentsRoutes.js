@@ -7,7 +7,18 @@ module.exports = (app) => {
 
   // 1. Create a single student
   app.post("/api/v1/students/create", async (req, res) => {
-   
+   try {
+    const student = await Student.create(req.body);
+    res.status(201).json({
+      success: true,
+      data: student,
+   });
+   } catch (error) {
+    res.status(400).json({
+      success:false,
+      error: error.message,
+    });
+   }
   });
 
   // 2. Create multiple students (insertMany)
