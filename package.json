@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "learn_mongo",
   "version": "1.0.0",
   "description": "",
@@ -9,10 +10,26 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
+=======
+  "name": "js-basics",
+  "version": "1.0.0",
+  "description": "basics of JS",
+  "license": "ISC",
+  "author": "Manas",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> f79b5dc5feca5da16f0d5953caa043c065d89a5e
   },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+<<<<<<< HEAD
     "mongoose": "^9.0.2"
+=======
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.1"
+>>>>>>> f79b5dc5feca5da16f0d5953caa043c065d89a5e
   }
 }
