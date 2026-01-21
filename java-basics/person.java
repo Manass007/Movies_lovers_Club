@@ -17,12 +17,6 @@ public class person {
     }
 
 }
-
-public class Student extends person {
-    ArrayList<Integer> marks = new ArrayList<>();
-    
-
-}
 // public class Main {
 //     public static void main(String[] args) {
 
